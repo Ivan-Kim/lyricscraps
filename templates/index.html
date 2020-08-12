@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lyricscraps</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="static/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="player">
+        <div id="readme">
+          <h1><strong>lyricscraps</strong></h1>
+          <pre>
+1. Type in a title of a song and its artist
+2. Just press enter! 
+
+This application works best when user types in songs with almost exclusively Japanese lyrics. 
+* Only lyrics listed on <a href="https://www.uta-net.com//" target="_blank">uta-net.com</a> are available.
+* Some embedded videos cannot be played due to the uploader disabling the embed feature.
+
+This is a personal project, and not commercial in any way.
+Developed by <a href="https://github.com/Ivan-Kim">Ivan Kim</a>
+        </pre>
+        </div>
+        <iframe
+          hidden
+          id="video"
+          width="666"
+          height="375"
+          src=""
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <form id="searchform" action="/" method="POST">
+        <h2>Search your song</h2>
+        <div class="input-group mb-3">
+          <input
+            id="searchbar"
+            type="text"
+            name="query"
+            placeholder="include artist and song names"
+            autocomplete="off"
+            class="form-control"
+            aria-describedby="basic-addon2"
+          />
+        </div>
+      </form>
+
+      <div class="lyrics">
+        <div class="column">
+          <h3>日本語 歌詞:</h3>
+          <pre id="original"></pre>
+        </div>
+        <div class="column">
+          <h3>한국어 번역:</h3>
+          <pre id="translated"></pre>
+        </div>
+      </div>
+    </div>
+    <script src="static/index.js"></script>
+  </body>
+</html>

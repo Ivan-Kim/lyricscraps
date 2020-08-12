@@ -1,0 +1,53 @@
+body {
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #f9f9f9;
+}
+
+h1,
+h2,
+h3 {
+  color: indigo;
+}
+
+#container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#searchform,
+#player {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#readme {
+  margin-top: 100px;
+}
+
+#searchform {
+  margin-top: 380px;
+}
+
+.lyrics {
+  margin-top: 480px;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow-y: scroll;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
